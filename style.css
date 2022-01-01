@@ -1,0 +1,71 @@
+* {
+    margin: auto auto;
+    padding : 0;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background {
+    transition: 2s;
+    background-color: rgb(90,150,90);
+    /* background-image: linear-gradient(rgb(90,150,90), rgb(50,90,60)); */
+}
+
+.background-move {
+    transition: 2s;
+    background-color: rgb(75,75,75);
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    background-image: url("./img/shirtLogoTall.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    transition: all 1s;
+    object-fit: fill; 
+}
+
+.card-move {
+    max-width: 50%;
+    position: relative;
+    top: -25%;
+    left: -25%;
+    transition: all 1s;
+    object-fit: fill;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgb(70,70,70);
+    border-radius: 15px;
+}
+
+.frame {
+    position: absolute;
+    opacity: 0.0;
+    transition: all 1s;
+    width: 90vw;
+    height: auto;
+}
+
+.frame-move {
+    transition: opacity, 1s;
+    opacity: 1.0;
+}
