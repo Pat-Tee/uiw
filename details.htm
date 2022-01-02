@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <style>
     * {
         margin: 0;
@@ -13,6 +14,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .text {
         text-align: center;
         text-shadow: -1px 1px 2px #000,
@@ -20,24 +22,35 @@
                     1px -1px 0 #000,
                     -1px -1px 0 #000;
         margin-bottom: 5%;
+        font-size: 2rem;
     }
+
 </style>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UIW - Welding</title>
+    <link rel="stylesheet" type="text/css" href="carousel.css" />
+    <title>UIW - What We Do</title>
 </head>
 
 <html>
 
 <body>
-    <h1 class="text">Proven at all position welding. Plenty of experience welding steel with SMAW and GMAW</h1>
+    <!-- <h1 class="text">Need some steel fabricated for an awning, support, or anything else?</h1> -->
+    <div class="slideShow">
+        <a class="prev" onclick="previous()"><<</a>
+        <div class="slide">
+            <img id="slide" src="./img/slide-1.jpg" alt="Slide image"/>
+        </div>
+        <a class="next" onclick="next()">>></a>
+        <!-- <img id="slide" src="./img/slide-2.jpg">
+        <img id="slide" src="./img/slide-3.jpg"> -->
+    </div>
 
 </body>
 
-<script>
+<script src="carousel.js"></script>
 
-</script>
 </html>

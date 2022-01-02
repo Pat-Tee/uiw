@@ -20,8 +20,7 @@ const clickHandler = (e) => {
     }
 
     const clickLink = e.target.getAttribute("href");
-    
-    // setTimeout(components.frameBox.classList.toggle("frame-move"), 1000);
+
     components.frameContent.src = clickLink;
     components.frameBox.className= "frame frame-move";
 

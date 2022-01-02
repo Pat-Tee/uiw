@@ -1,0 +1,63 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; 
+    this breaks things for some reason*/
+}
+
+.slideshow {
+    max-width: 100vw;
+    height: auto;
+    position: relative;
+    margin: 80px 200px 80px 200px;
+}
+
+#slide {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid black;
+    left: 50%;
+}
+
+.slide {
+    width: 100%;
+    text-align: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    transition: 0.5s ease;
+    user-select: none;
+    display: inline-block;
+    border: none;
+    transition: all 0.5s;
+    border-radius: 0 8px 8px 0;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    margin-top: -22px;
+    padding: 20px;
+    font-family: "Book Antiqua";
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* from:
+https://medium.com/nerd-for-tech/do-you-want-to-create-your-own-image-slider-with-javascript-c6bbb76bede8
+*/
