@@ -1,3 +1,5 @@
+/* this is old version, kept as reference */
+
 * {
     margin: 0;
     padding: 0;
@@ -85,6 +87,8 @@ body {
     border-radius: 10px;
     border: 3px solid rgb(163, 139, 139);
     color: white;
+    overflow: hidden;
+    text-align: center;
 }
 
 .mainFrame-move {

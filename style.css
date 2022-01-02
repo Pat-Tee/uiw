@@ -76,6 +76,6 @@ img {
 }
 
 .frame-move {
-    /* transition: opacity 0.5s; */
+    transition: opacity 3s;
     opacity: 1.0;
 }
