@@ -1,7 +1,7 @@
 var images = [
-    "./img/slide-1.JPG",
-    "./img/slide-2.JPG",
-    "./img/slide-3.JPG" ];
+    "./img/slide-1.jpg",
+    "./img/slide-2.jpg",
+    "./img/slide-3.jpg" ];
 
 var currentImg = 0;
 
