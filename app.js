@@ -1,36 +1,43 @@
 const clickHandler = (e) => {
+
     const clickId = e.target.getAttribute("id");
-    // const sourceID = e.currentTarget.getAttribute("id");
-
-    if (clickId == "phone" || clickId == "email") return;
-
-    e.preventDefault();
 
     if (clickId == "uiwCard") return;
+    if (clickId == "phone" || clickId == "email") return;
+    e.preventDefault();
+
+    if (clickId == prevId) return;
+
     if (clickId != "home") home = false;
 
-    if (home && clickId == "home") return;
-
     if (clickId == "home") {
+        if (home) return;
         home = true;
-        components.frame.className = "frame";
+        components.frameBox.className = "frame";
         components.card.className = "card";
-        components.frame.src = "";
-        document.body.className = "background";
+        prevId = clickId;
         return;
     }
 
-    components.frame.src = e.target.getAttribute("href");
-    components.frame.className = "frame frame-move";
-    components.card.className = "card card-move";
-    document.body.className = "background-move";
+    const clickLink = e.target.getAttribute("href");
+    
+    // setTimeout(components.frameBox.classList.toggle("frame-move"), 1000);
+    components.frameContent.src = clickLink;
+    components.frameBox.className= "frame frame-move";
+
+    if (prevId == "home")
+        components.card.classList.toggle("card-move");
+
+    prevId = clickId;
+
 }
 
 const components = {
     card: document.getElementById("card"),
-    frame: document.getElementById("frame")
+    frameBox: document.getElementById("frameBox"),
+    frameContent: document.getElementById("frameContent")
 };
 
 components.card.addEventListener("click", clickHandler, false);
-console.log("comp card: "+ components.card);
 var home = true;
+var prevId = "home";
