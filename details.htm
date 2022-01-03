@@ -9,9 +9,6 @@
     .main {
         margin: 0, auto;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .text {
@@ -23,6 +20,23 @@
         margin-bottom: 2%;
         color: rgb(225,225,225);
     }
+
+    .slideButton {
+        color: black;
+        border: 1px solid black;
+        background-color: red;
+        border-radius: 15px;
+        padding: 5px;
+        opacity: .8;
+        font-weight:bold;
+        cursor: pointer;
+        float: right;
+    }
+
+    .greenButton {
+        background-color: green;
+    }
+
 </style>
 
 <head>
@@ -35,14 +49,17 @@
 </head>
 
 <html>
-<body onload="loadSlides(5)">
+<body  onload="loadSlides(3, 4200)">
     <p class="text">Structural steel fabrication and erection, miscellanous steel, and general welding</p>
+
     <div class="slideShow">
         <!-- <a class="prev" onclick="previous()"><<</a> -->
-        <div class="slide" id="slideCount">
+        <div style="float: left;" class="slide" id="slideCount">
             <img id="slide" src="" alt="Slide image" />
         </div>
         <!-- <a class="next" onclick="next()">>></a> -->
+        <!-- Removed forward/backward slide buttons. Plan to utilize in the future once I've added better flow and functionality to the carousel scripting  -->
+        <!-- <button type="button" class="slideButton" onclick="{ toggleSlideshow(); this.innerHTML == 'Stop' ? this.innerHTML = 'Play' : this.innerHTML = 'Stop'; this.classList.toggle('greenButton'); }">Stop</button> -->
     </div>
     
 </body>

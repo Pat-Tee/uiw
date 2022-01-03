@@ -46,15 +46,15 @@
 }
 
 .card-move {
-    /* -webkit-transform: (translateZ(0)); */
+    /* -webkit-transform: (translateZ(0)); */ /* This one line supposedly enables the 3d graphic acceleration on mobile Apple devices for smoother animations.
+                                                It unfortunately has the side effect of changing the spacing and layout significantly enough to be impractical */
 
     -ms-transform: translateY(-65%) scale(.5,.5);
     -webkit-transform: translateY(-65%) scale(.5,.5);
     -moz-transform: translateY(-65%) scale(.5,.5);
     -o-transform: translateY(-65%) scale(.5,.5); 
-    /* transform: translateY(-30%) scale(.5, .5); */
-
-    transition: all 1s;
+    /* transform: translateY(-30%) scale(.5, .5); */ 
+    transition: all 1s ease-in-out;
 }
 
 img {
@@ -68,7 +68,7 @@ img {
     top: 30%;
     left: 5%;
     right: 95%;
-    bottom: 5%;
+    bottom: 3%;
     opacity: 0.0;
     transition: opacity 1s;
     width: 90vw;
