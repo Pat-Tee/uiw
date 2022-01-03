@@ -7,4 +7,5 @@
 # production
 
 # misc
-./img/*.jpg
+/img
+!/img/card-iphone11.png
