@@ -6,8 +6,18 @@ var slideTimer = 3000;
 
 function UrlExists(url) {   // Helper function to make http request to check if slide[i] exists
     var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
+    // http.open('HEAD', url, false); // this code raises a warning in devTools: as synchronous, malign to the UX and deprecated
+    // http.send();
+
+    http.onreadystatechange = function() {
+        if (this.readyState === this.DONE) {
+            console.log(this.status) // do something; the request has completed
+        }
+    }
+
+    http.open("HEAD", url) // replace with URL of your choosing
+    http.send()
+
     if (http.status != 404)
         return true;
     else
